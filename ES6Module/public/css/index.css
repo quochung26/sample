@@ -1,0 +1,26 @@
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+input {
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
+.result {
+    display: block;
+    padding-top: 10px;
+}
+
+.result.success {
+    color: green;
+}
+
+.result.fail {
+    color: red;
+}
