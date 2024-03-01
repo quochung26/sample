@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Conventions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                gray: '#F1F2F6',
+                blue: '#1E22AA'
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        #store-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <!-- header -->
+        <header>
+            <div class="flex flex-row justify-end py-1.5 px-7 bg-gray">
+                <div id="store-dropdown" class="relative">
+                    <button class="flex flex-row content-center rounded-md text-sm" onclick="">
+                        Store
+                        <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-content absolute right-0 z-10 w-24 bg-white rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 hidden">
+                        <ul>
+                            <li class="hover:bg-gray"><a href="#" class="px-4 py-2">Store 1</a></li>
+                            <li class="hover:bg-gray"><a href="#" class="px-4 py-2">Store 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex bg-blue min-h-20 rounded-b-2xl py-2 px-7 gap-x-6">
+                <div class="w-40 flex justify-center">
+                    <svg class="w-1/2" viewBox="100 100 50 32" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M 150.07 131.439 L 131.925 100 L 122.206 105.606 L 137.112 131.439 L 150.07 131.439 Z M 132.781 131.439 L 120.797 110.692 L 111.078 116.298 L 119.823 131.439 L 132.781 131.439 Z M 109.718 121.401 L 115.509 131.439 L 102.551 131.439 L 100 127.007 L 109.718 121.401 Z" fill="white"></path></svg>
+                </div>
+                <div class="flex-1 flex items-center">
+                    <div class="relative w-full"> 
+                        <span class="absolute flex right-3.5 top-2.5 w-5 h-5 ">
+                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; color: rgba(0, 0, 0, 0.87); fill: rgb(118, 118, 118); height: 20px; width: 20px; user-select: none; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;"><path d="M12.9286 11.5H12.1386L11.8586 11.23C13.0586 9.83002 13.6786 7.92002 13.3386 5.89002C12.8686 3.11002 10.5486 0.890015 7.7486 0.550015C3.5186 0.0300153 -0.0413959 3.59001 0.478604 7.82001C0.818604 10.62 3.0386 12.94 5.8186 13.41C7.8486 13.75 9.7586 13.13 11.1586 11.93L11.4286 12.21V13L15.6786 17.25C16.0886 17.66 16.7586 17.66 17.1686 17.25C17.5786 16.84 17.5786 16.17 17.1686 15.76L12.9286 11.5ZM6.9286 11.5C4.4386 11.5 2.4286 9.49002 2.4286 7.00002C2.4286 4.51002 4.4386 2.50002 6.9286 2.50002C9.4186 2.50002 11.4286 4.51002 11.4286 7.00002C11.4286 9.49002 9.4186 11.5 6.9286 11.5Z"></path></svg>
+                        </span>
+                        <input type="text" class="w-full py-1.5 px-5 h-10 rounded-3xl focus-visible:outline-none">
+                    </div>
+                </div>
+                <div class="flex justify-end ">
+                    <div class="items-center flex gap-x-2 p-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 12C11.5155 12 12.969 11.3679 14.0406 10.2426C15.1122 9.11742 15.7143 7.5913 15.7143 6C15.7143 4.4087 15.1122 2.88258 14.0406 1.75736C12.969 0.632141 11.5155 0 10 0C8.48448 0 7.03103 0.632141 5.95939 1.75736C4.88775 2.88258 4.28571 4.4087 4.28571 6C4.28571 7.5913 4.88775 9.11742 5.95939 10.2426C7.03103 11.3679 8.48448 12 10 12ZM7.95982 14.25C3.5625 14.25 0 17.9906 0 22.6078C0 23.3766 0.59375 24 1.32589 24H18.6741C19.4062 24 20 23.3766 20 22.6078C20 17.9906 16.4375 14.25 12.0402 14.25H7.95982Z" fill="white"></path></svg>
+                        <span class="text-white">Login</span>
+                    </div>
+                    <div class="items-center flex gap-x-2 p-2.5 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none" style="display: block; color: rgba(0, 0, 0, 0.87); fill: rgba(0, 0, 0, 0.87); height: 22px; width: 24px; user-select: none; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; margin: 0px;"><g clip-path="url(#clip0_420_4328)"><path d="M0 1.03125C0 0.459766 0.445833 0 1 0H2.89583C3.8125 0 4.625 0.55 5.00417 1.375H22.1292C23.225 1.375 24.025 2.44922 23.7375 3.54063L22.0292 10.0848C21.675 11.434 20.4875 12.375 19.1333 12.375H7.1125L7.3375 13.5996C7.42917 14.0852 7.84167 14.4375 8.32083 14.4375H20.3333C20.8875 14.4375 21.3333 14.8973 21.3333 15.4688C21.3333 16.0402 20.8875 16.5 20.3333 16.5H8.32083C6.87917 16.5 5.64167 15.443 5.375 13.9863L3.225 2.3418C3.19583 2.17852 3.05833 2.0625 2.89583 2.0625H1C0.445833 2.0625 0 1.60273 0 1.03125ZM5.33333 19.9375C5.33333 19.6666 5.38506 19.3984 5.48557 19.1482C5.58608 18.898 5.7334 18.6706 5.91912 18.4791C6.10484 18.2876 6.32531 18.1356 6.56797 18.032C6.81062 17.9283 7.07069 17.875 7.33333 17.875C7.59598 17.875 7.85605 17.9283 8.0987 18.032C8.34135 18.1356 8.56183 18.2876 8.74755 18.4791C8.93326 18.6706 9.08058 18.898 9.18109 19.1482C9.2816 19.3984 9.33333 19.6666 9.33333 19.9375C9.33333 20.2084 9.2816 20.4766 9.18109 20.7268C9.08058 20.977 8.93326 21.2044 8.74755 21.3959C8.56183 21.5874 8.34135 21.7394 8.0987 21.843C7.85605 21.9467 7.59598 22 7.33333 22C7.07069 22 6.81062 21.9467 6.56797 21.843C6.32531 21.7394 6.10484 21.5874 5.91912 21.3959C5.7334 21.2044 5.58608 20.977 5.48557 20.7268C5.38506 20.4766 5.33333 20.2084 5.33333 19.9375ZM19.3333 17.875C19.8638 17.875 20.3725 18.0923 20.7475 18.4791C21.1226 18.8659 21.3333 19.3905 21.3333 19.9375C21.3333 20.4845 21.1226 21.0091 20.7475 21.3959C20.3725 21.7827 19.8638 22 19.3333 22C18.8029 22 18.2942 21.7827 17.9191 21.3959C17.544 21.0091 17.3333 20.4845 17.3333 19.9375C17.3333 19.3905 17.544 18.8659 17.9191 18.4791C18.2942 18.0923 18.8029 17.875 19.3333 17.875Z" fill="white"></path></g><defs><clipPath id="clip0_420_4328"><rect width="24" height="22" fill="white"></rect></clipPath></defs></svg>
+                        <span class="text-white">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- gallery item-->
+        <h1 class="text-lg my-5">Gallery Item</h1>
+        <div class="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+            <div class="rounded-t-2xl hover:shadow-md group relative">
+                <div class="relative">
+                    <a href="#">
+                        <div class="relative pt-[100%]">
+                            <div class="absolute top-[50%] left-[50%] w-full h-full mx-auto transform -translate-y-1/2 -translate-x-1/2">
+                                <img class="rounded-t-2xl w-full h-full object-fill align-top" src="./images/product_image_1.jpg" alt="product image 1">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <div><a href="#">Addidas Falcon</a></div>
+                    <div class="flex items-center gap-x-1 flex-wrap">
+                        <span>1.250.000</span>
+                    </div>
+                </div>
+                <div class="absolute hidden gap-x-1 z-10 bg-white w-full rounded-b-2xl shadow-md group-hover:flex p-1.5">
+                    <button class="basis-1/2 p-2 text-center">Compare</button>
+                    <button class="basis-1/2 text-white rounded-md p-2 bg-blue">Add To Cart</button>
+                </div>
+            </div>
+            <div class="rounded-t-2xl hover:shadow-md group relative">
+                <div class="relative">
+                    <a href="#">
+                        <div class="relative pt-[100%]">
+                            <div class="absolute top-[50%] left-[50%] w-full h-full mx-auto transform -translate-y-1/2 -translate-x-1/2">
+                                <img class="w-full h-full object-fill align-top rounded-t-2xl" src="./images/product_image_4.png" alt="product image 1">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <div><a href="#">Addidas Falcon</a></div>
+                    <div></div>
+                    <div class="flex items-center gap-x-1 flex-wrap">
+                        <span>1.250.000</span>
+                        <span class="text-xs line-through">1.500.000</span>
+                    </div>
+                </div>
+                <div class="absolute hidden gap-x-1 z-10 bg-white w-full rounded-b-2xl shadow-md group-hover:flex p-1.5">
+                    <button class="basis-1/2 p-2 text-center">Compare</button>
+                    <button class="basis-1/2 text-white rounded-md p-2 bg-blue">Add To Cart</button>
+                </div>
+            </div>
+            <div class="rounded-t-2xl hover:shadow-md group relative">
+                <div class="relative">
+                    <a href="#">
+                        <div class="relative pt-[100%]">
+                            <div class="absolute top-[50%] left-[50%] w-full h-full mx-auto transform -translate-y-1/2 -translate-x-1/2">
+                                <img class="rounded-t-2xl w-full h-full object-fill align-top" src="./images/product_image_1.jpg" alt="product image 1">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <div><a href="#">Addidas Falcon</a></div>
+                    <div class="flex items-center gap-x-1 flex-wrap">
+                        <span>1.250.000</span>
+                    </div>
+                </div>
+                <div class="absolute hidden gap-x-1 z-10 bg-white w-full rounded-b-2xl shadow-md group-hover:flex p-1.5">
+                    <button class="basis-1/2 p-2 text-center">Compare</button>
+                    <button class="basis-1/2 text-white rounded-md p-2 bg-blue">Add To Cart</button>
+                </div>
+            </div>
+            <div class="rounded-t-2xl hover:shadow-md group relative">
+                <div class="relative">
+                    <a href="#">
+                        <div class="relative pt-[100%]">
+                            <div class="absolute top-[50%] left-[50%] w-full h-full mx-auto transform -translate-y-1/2 -translate-x-1/2">
+                                <img class="w-full h-full object-fill align-top rounded-t-2xl" src="./images/product_image_4.png" alt="product image 1">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <div><a href="#">Addidas Falcon</a></div>
+                    <div></div>
+                    <div class="flex items-center gap-x-1 flex-wrap">
+                        <span>1.250.000</span>
+                        <span class="text-xs line-through">1.500.000</span>
+                    </div>
+                </div>
+                <div class="absolute hidden gap-x-1 z-10 bg-white w-full rounded-b-2xl shadow-md group-hover:flex p-1.5">
+                    <button class="basis-1/2 p-2 text-center">Compare</button>
+                    <button class="basis-1/2 text-white rounded-md p-2 bg-blue">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
